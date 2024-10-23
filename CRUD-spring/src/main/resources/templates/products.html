@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .container {
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            padding: 40px;
+        }
+        h2 {
+            font-weight: bold;
+            font-size : 44px;
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .thead-dark th {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+        .btn {
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 16px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center">Bulking Product List</h2>
+    <form th:action="@{/products}" method="post" class="mb-4">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name" placeholder="Product Name" required>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="number" step="0.01" class="form-control" name="price" placeholder="Price" required>
+            </div>
+            <div class="form-group col-md-2">
+                <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+            </div>
+        </div>
+    </form>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price per 100g</th>
+            <th class="text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.name}"></td>
+            <td>$<span th:text="${product.price}"></span></td>
+            <td class="text-center">
+                <form th:action="@{/products/{id}/delete(id=${product.id})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash icon"></i> Delete
+                    </button>
+                </form>
+                <a th:href="@{/products/{id}/edit(id=${product.id})}" class="btn btn-secondary btn-sm">
+                    <i class="fas fa-edit icon"></i> Edit
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="footer">
+        &copy; 2024 Supriyandi La Awe - Learn Spring Boot. All rights reserved.
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

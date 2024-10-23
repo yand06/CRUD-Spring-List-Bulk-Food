@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            padding: 40px;
+        }
+        h2 {
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 30px;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn {
+            transition: background-color 0.3s, color 0.3s;
+            width: 100%;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .input-group-text {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 5px 0 0 5px;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .card {
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center">Edit Product</h2>
+            <form th:action="@{/products/{id}(id=${product.id})}" method="post">
+                <input type="hidden" name="_method" value="put"/> <!-- Meniru metode PUT -->
+                <div class="form-group">
+                    <label for="productName">
+                        <i class="fas fa-tag icon"></i>Name
+                    </label>
+                    <input type="text" class="form-control" id="productName" name="name" th:value="${product.name}" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">
+                        <i class="fas fa-dollar-sign icon"></i>Price
+                    </label>
+                    <input type="number" step="0.01" class="form-control" id="productPrice" name="price" th:value="${product.price}" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
