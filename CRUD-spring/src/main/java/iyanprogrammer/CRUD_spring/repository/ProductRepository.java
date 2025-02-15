@@ -1,6 +1,5 @@
 package iyanprogrammer.CRUD_spring.repository;
 
-// Mengimpor kelas Product dari model dan JpaRepository dari Spring Data JPA.
 import iyanprogrammer.CRUD_spring.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
