@@ -1,6 +1,5 @@
 package iyanprogrammer.CRUD_spring.service;
 
-// Mengimpor kelas-kelas yang diperlukan dari model, repository, dan Spring Framework.
 import iyanprogrammer.CRUD_spring.model.Product;
 import iyanprogrammer.CRUD_spring.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
