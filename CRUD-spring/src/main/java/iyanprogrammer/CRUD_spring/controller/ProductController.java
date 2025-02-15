@@ -1,6 +1,5 @@
 package iyanprogrammer.CRUD_spring.controller;
 
-// Mengimpor kelas-kelas yang diperlukan untuk controller.
 import iyanprogrammer.CRUD_spring.model.Product;
 import iyanprogrammer.CRUD_spring.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
