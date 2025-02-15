@@ -1,6 +1,5 @@
 package iyanprogrammer.CRUD_spring.configuration;
 
-// Mengimpor beberapa kelas yang diperlukan untuk konfigurasi JPA di Spring.
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
