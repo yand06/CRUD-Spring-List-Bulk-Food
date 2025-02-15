@@ -1,6 +1,5 @@
 package iyanprogrammer.CRUD_spring.model;
 
-// Mengimpor kelas-kelas yang diperlukan dari JPA untuk pemetaan entitas ke tabel database.
 import jakarta.persistence.*;
 
 @Entity // Menandai kelas ini sebagai entitas JPA, yang akan dipetakan ke tabel database.
