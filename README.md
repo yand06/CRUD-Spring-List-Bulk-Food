@@ -13,7 +13,6 @@ This Spring Boot application provides a comprehensive system for managing bulk p
 - 💰 Price per 100g calculation and display
 - 🎨 Clean and intuitive user interface
 - 🔍 Product filtering and search capabilities
-- 📱 Responsive design for all devices
 - 🔒 Secure data handling
 
 ## 🛠️ Built With
@@ -49,32 +48,6 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-### Database Configuration
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/bulking_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-```
-
-## 📂 Project Structure
-```
-bulking-product-management/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/
-│   │   │       └── example/
-│   │   │           ├── controller/
-│   │   │           ├── model/
-│   │   │           ├── repository/
-│   │   │           └── service/
-│   │   └── resources/
-│   │       ├── static/
-│   │       └── templates/
-├── pom.xml
-└── README.md
-```
-
 ## 🌐 API Endpoints
 - `GET /products` - List all products
 - `POST /products` - Add a new product
@@ -99,8 +72,3 @@ mvn test
 # Package the application
 mvn package
 ```
-
-## 👤 Created By
-**Supriyandi La Awe**
-- GitHub: [@yand06](https://github.com/yand06)
-- LinkedIn: [@supriyandilaawe](https://linkedin.com/in/supriyandilaawe)
