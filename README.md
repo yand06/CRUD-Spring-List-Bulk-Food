@@ -2,7 +2,7 @@
 > A Spring Boot CRUD application for managing bulk product prices and inventory
 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.0-brightgreen.svg)
 ![Java](https://img.shields.io/badge/Java-17-orange.svg)
 
 ## 📖 About Project
