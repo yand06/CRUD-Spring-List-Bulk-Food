@@ -12,7 +12,6 @@ This Spring Boot application provides a comprehensive system for managing bulk p
 - 📝 Full CRUD functionality for product management
 - 💰 Price per 100g calculation and display
 - 🎨 Clean and intuitive user interface
-- 🔍 Product filtering and search capabilities
 - 🔒 Secure data handling
 
 ## 🛠️ Built With
